@@ -1,0 +1,5 @@
+INTERGER A,B,C
+SET A=12 ,B=4
+C:= A>>B
+PRINT C
+ANS-: 0
