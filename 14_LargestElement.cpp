@@ -1,20 +1,23 @@
-DECLARE N: INTEGER
-DECLARE I: INTEGER
-DECLARE ARR[100]: INTEGER
-DECLARE MAX: INTEGER
+#include <iostream>
+using namespace std;
 
-READ N
+int main() {
+    int N;
+    cin >> N;
+    int ARR[100];
+    
+    for (int I = 0; I < N; I++) {
+        cin >> ARR[I];
+    }
 
-FOR I := 0 TO N-1
-    READ ARR[I]
-END FOR
+    int MAX = ARR[0];
+    for (int I = 1; I < N; I++) {
+        if (ARR[I] > MAX) {
+            MAX = ARR[I];
+        }
+    }
 
-MAX := ARR[0]
+    cout << MAX << endl;
 
-FOR I := 1 TO N-1
-    IF ARR[I] > MAX
-        MAX := ARR[I]
-    END IF
-END FOR
-
-PRINT MAX
+    return 0;
+}
